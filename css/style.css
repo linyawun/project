@@ -1,0 +1,451 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+  }
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    color: #3F5D45;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+.container{
+    max-width: 940px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.banner{
+    margin-bottom: 60px;
+}
+.main{
+    margin-bottom: 60px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.form{
+    background: #3F5D45;
+    padding: 30px 0;
+}
+.footer{
+    background: #EAF0ED;
+    padding: 30px 0;
+}
+
+.hamIcon{
+    display: none;
+}
+.headerLogo{
+    width: 220px;   /*自訂文字寬度*/
+    height: 40px;   /*自訂文字高度*/
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: 101%;  /*縮排語法，設定 101% 讓 a 連結的文字超出圖片範圍*/
+    overflow: hidden;  /*再用 overflow 隱藏多出來的文字*/
+    white-space: nowrap;  /*讓文字不換行 */
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu a{
+    color: #3F5D45;
+    font-size: 16px;
+    margin-left: 50px;
+    padding: 10px;
+}
+.menu a:hover{
+    background-image: linear-gradient(0deg,#EAF0ED 50%,transparent 50.1%)
+}
+
+.menu img{
+    height: 24px;
+}
+
+.category{
+    width: 30%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 33px;
+}
+.category h3{
+    background: #3F5D45;
+    color: #EAF0ED;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.category a{
+    color: #3F5D45;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border: 1px solid #EAF0ED;
+}
+.category a:hover{
+    background: #EAF0ED;
+}
+.categoryNow{
+    background: #EAF0ED;
+}
+
+.product{
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product li{
+    width: 46%;
+    position: relative;
+    margin-bottom: 20px;
+}
+.product li img{
+    width: 100%;
+}
+
+.productInfo{
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #EAF0ED;
+}
+.productInfo h3{
+    width: 56%;
+    line-height: 20px;
+    font-weight: 300;
+    padding: 14px 0;
+    border-right: 1px solid #EAF0ED;
+}
+.productInfo span{
+    width: 44%;
+    line-height: 24px;
+    padding: 14px 0;
+}
+
+.cart{
+    background: #EAF0ED;
+    border: 1px solid #EAF0ED;
+    color: #3F5D45;
+    font-size: 24px;
+    line-height: 20px;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.cart:hover{
+    background: #3F5D45;
+    color: #EAF0ED;
+}
+
+.favorite{
+    position: absolute;
+    top: 19px;
+    right: 22px;
+}
+.special{
+    background: #3F5D45;
+    color: #EAF0ED;
+    position: absolute;
+    left: 20px;
+    writing-mode: vertical-lr ;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 6px;
+    padding: 10px;
+}
+
+.page{
+    display: flex;
+    justify-content: flex-end; 
+}
+.page a{
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #EAF0ED;
+    font-size: 20px;
+    line-height: 20px;
+    /* letter-spacing: 8.3px;
+    text-indent: 8.3px; */
+    /* padding: 20px; */
+    color: #3F5D45;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageNow a{
+    color: #EAF0ED;
+    background: #3F5D45;
+    border: 1px solid #3F5D45;
+}
+.page a:hover{
+    background: #3F5D45;
+    color: #EAF0ED;
+    border: 1px solid #3F5D45;
+}
+.arrow a:hover{
+    background: #EAF0ED;
+    border: 1px solid #EAF0ED;
+}
+
+.mailWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mailText{
+    display: flex;
+    align-items: center;
+} 
+.mailText img{
+    width: 40px;
+    margin-right: 20px;
+}
+.mailText label{
+    color: #EAF0ED;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 300;
+}
+
+.mailForm{
+    display: flex;
+    justify-content: space-between;
+    background: #EAF0ED;
+}
+.mailIcon{
+  padding: 16px 20px;
+} 
+
+.inputText{
+    border: none;
+    background: #EAF0ED;
+    font-size: 18px;
+    color: #3F5D45;
+    width: 100%;
+}
+.submitBtn{
+    border: none;
+    display: block;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_forward-24px.png);
+    padding: 0 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #FFE180;
+}
+
+.submitBtn:hover{
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_forward-24px.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #FFECAD;
+    cursor: pointer;
+}
+
+
+.contactWrap{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.contactText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contactText img{
+    width: 171px;
+}
+.contactText ul li{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+.slogan{
+    writing-mode: vertical-rl;
+    font-size: 23px;
+    line-height: 1.5;
+    letter-spacing: 6px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+}
+.media{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.media ul{
+    display: flex;
+}
+.media ul li{
+    margin-right: 8px;
+}
+.media img{
+    width: 32px;
+}
+.media p{
+    font-family: 'Noto Serif TC', serif;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@media(max-width:768px){
+    .container{
+        max-width: 768px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .header, .product, .page, .form, .footer{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .hamIcon{
+        display: block;
+    }
+    .headerLogo{
+        width: 115px;   /*自訂文字寬度*/
+        height: 17px;  /*自訂文字高度 */
+        background-image: url('https://hexschool.github.io/webLayoutTraining1st/student-week1/logotype-lg-dark.svg');
+    }
+    .menu li:nth-child(-n+3){
+        display: none;
+    }
+    .menu a{
+        margin-left: 0px;
+        padding: 0px;
+    }
+    .banner{
+        margin-bottom: 0;
+    }
+    .category{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .category ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .category ul li{
+        width: 50%;
+    }
+    .product{
+        width: 100%;
+    }
+    .mailWrap{
+        justify-content:center;
+    }
+    .mailText{
+        justify-content: center;
+        margin-bottom: 33px;
+        width: 80%;
+    } 
+    .mailForm{
+       width: 80%;
+    }
+    .contactText img{
+        margin-bottom: 40px;
+    }
+    .slogan{
+        display: none;
+    }
+    .media{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .media ul{
+        margin-bottom: 23px;
+    }
+}
+
+@media(max-width:375px){
+    .container{
+        max-width: 375px;
+    }
+    .category ul li{
+        width: 100%;
+    }
+    .mailText label{
+        font-size: 20px;
+    }
+    .inputText{
+        font-size: 14px;
+    }
+    .product li{
+        width: 100%;
+    }
+    .page{
+        justify-content: center; 
+    }
+}
