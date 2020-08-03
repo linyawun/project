@@ -90,6 +90,10 @@ a{
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
+.inner{
+    max-width: 800px;
+    margin: 0 auto;
+}
 .form{
     background: #3F5D45;
     padding: 30px 0;
@@ -166,10 +170,6 @@ a{
     position: relative;
     margin-bottom: 20px;
 }
-.product li img{
-    width: 100%;
-}
-
 .productInfo{
     display: flex;
     text-align: center;
@@ -228,14 +228,12 @@ a{
 }
 .page a{
     text-align: center;
-    width: 60px;
-    height: 60px;
+    /* width: 60px;
+    height: 60px; */
     border: 1px solid #EAF0ED;
     font-size: 20px;
     line-height: 20px;
-    /* letter-spacing: 8.3px;
-    text-indent: 8.3px; */
-    /* padding: 20px; */
+    padding: 19px 23.3px;
     color: #3F5D45;
 
     display: flex;
@@ -252,6 +250,9 @@ a{
     background: #3F5D45;
     color: #EAF0ED;
     border: 1px solid #3F5D45;
+}
+.arrow a{
+    padding: 17px;
 }
 .arrow a:hover{
     background: #EAF0ED;
@@ -272,7 +273,7 @@ a{
     width: 40px;
     margin-right: 20px;
 }
-.mailText label{
+.mailText p{
     color: #EAF0ED;
     font-size: 24px;
     line-height: 29px;
@@ -344,7 +345,7 @@ a{
 .media{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 .media ul{
     display: flex;
@@ -366,6 +367,9 @@ a{
         max-width: 768px;
         padding-left: 0px;
         padding-right: 0px;
+    }
+    .inner{
+        max-width: 628px;
     }
     .header, .product, .page, .form, .footer{
         padding-left: 30px;
@@ -436,7 +440,7 @@ a{
     .category ul li{
         width: 100%;
     }
-    .mailText label{
+    .mailText p{
         font-size: 20px;
     }
     .inputText{
